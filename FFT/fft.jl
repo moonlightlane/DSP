@@ -1,4 +1,4 @@
-function fastFFT(x)
+function myFFT(x)
   # function fastFFT
   # perform fast fourier transform
   # using the simplest radix-2, decimation-in-time algorithm
@@ -21,8 +21,8 @@ function fastFFT(x)
   else
     # recursive procedure
     for k = 1:N/2
-      E = fastFFT(x[1:2:end])
-      O = fastFFT(x[2:2:end])
+      E = myFFT(x[1:2:end])
+      O = myFFT(x[2:2:end])
       X[k] = E[k] + W^(k-1)*O[k]
       X[k+N/2] = E[k] + W^(k-1+N/2)*O[k]
     end
@@ -32,6 +32,6 @@ function fastFFT(x)
 end
 
 # test cases
-x = [1,2,3,4]  # test input vector
-fft(x)         # julia implementation of FFT
-fastFFT(x)     # my implementation of FFT
+#x = [1,2,3,4]  # test input vector
+#fft(x)         # julia implementation of FFT
+#myFFT(x)     # my implementation of FFT
