@@ -1,0 +1,5 @@
+This is a Julia implementation of the paper "Constrained multi-channel linear prediction for adaptive speech dereverberation"
+
+https://ieeexplore.ieee.org/iel7/7585856/7602877/07602922.pdf
+
+Note this is NOT an official implementation and is not under maintainance; use at your own risk. 
